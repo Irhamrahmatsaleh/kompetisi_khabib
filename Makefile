@@ -3,7 +3,7 @@ VENV ?= .venv
 RUNPY := $(VENV)/bin/python
 PIP := $(VENV)/bin/pip
 
-.PHONY: install serve clean
+.PHONY: install serve core clean
 
 install:
 	$(PYTHON) -m venv $(VENV)
@@ -11,7 +11,10 @@ install:
 	$(PIP) install -r requirements.txt
 
 serve:
-	$(RUNPY) analyzer.py
+	$(RUNPY) competition_scanner.py --symbols ALL --top 20
+
+core:
+	$(RUNPY) competition_scanner.py --symbols CORE --top 12
 
 clean:
 	rm -rf $(VENV) __pycache__ .pytest_cache
