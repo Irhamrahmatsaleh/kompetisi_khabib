@@ -1,6 +1,6 @@
 # kompetisi_khabib
 
-Multi-asset demo competition scanner for FX, metals, indices, oil, and crypto market proxies. It ranks candidates by trend, momentum, volatility, and ATR expansion, then prints competition planning math. The output is analytical context only, not a guarantee or execution instruction.
+Multi-asset demo competition scanner for FX, metals, indices, oil, and crypto market proxies. It ranks candidates by trend, momentum, volatility, and ATR expansion, then prints BUY/SELL/WAIT scenarios with Entry, Stop Loss, TP1, TP2, market-status estimates, and competition planning math. The output is demo-planning context only, not a guarantee.
 
 1. Clone the repository on Ubuntu:
 ```bash
