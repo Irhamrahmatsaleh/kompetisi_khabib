@@ -1,6 +1,6 @@
 # kompetisi_khabib
 
-Multi-asset demo competition scanner for FX, metals, indices, oil, and crypto market proxies. It ranks candidates by trend, momentum, volatility, and ATR expansion, then prints BUY/SELL/WAIT scenarios with Entry, Stop Loss, TP1, TP2, market-status estimates, and competition planning math. The output is demo-planning context only, not a guarantee.
+Broad demo-competition scanner for FX, metals, energy, indices, crypto, stocks, and ETFs. It compares a wide market universe, ranks BUY/SELL candidates, and prints Entry, Stop Loss, TP1, TP2, score, risk regime, and market-status estimates. The output is demo-planning context only, not a guarantee; the trading platform's BUY/SELL buttons, spread, margin, and contract size remain the final truth.
 
 1. Clone the repository on Ubuntu:
 ```bash
@@ -14,7 +14,7 @@ sudo apt update && sudo apt install -y python3 python3-full python3-venv make
 make install
 ```
 
-3. Execute the engine:
+3. Execute the broad scanner:
 ```bash
 make serve
 ```
