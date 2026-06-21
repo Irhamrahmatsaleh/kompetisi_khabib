@@ -1,13 +1,17 @@
 PYTHON ?= python3
-PIP ?= pip3
-SYMBOL ?= BTC-USD
-PERIOD ?= 6mo
-INTERVAL ?= 1d
+VENV ?= .venv
+RUNPY := $(VENV)/bin/python
+PIP := $(VENV)/bin/pip
 
-.PHONY: install serve
+.PHONY: install serve clean
 
 install:
+	$(PYTHON) -m venv $(VENV)
+	$(PIP) install --upgrade pip
 	$(PIP) install -r requirements.txt
 
 serve:
-	$(PYTHON) analyzer.py --symbol $(SYMBOL) --period $(PERIOD) --interval $(INTERVAL)
+	$(RUNPY) analyzer.py
+
+clean:
+	rm -rf $(VENV) __pycache__ .pytest_cache
